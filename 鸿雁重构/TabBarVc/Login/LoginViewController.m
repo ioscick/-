@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginManager.h"
+#import "UserModel.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 {
@@ -120,6 +121,18 @@
         [hud removeFromSuperview];
         MessageView *message = [[MessageView alloc] initWithFrame:CGRectMake(WIDTH / 2 - 100, MainHIGHT / 2 - 30, 200, 60) Text:@"登录成功"];
         [self.view addSubview:message];
+        
+        UserModel *model = [[UserModel alloc] initWithDict:[json objectForKey:@"data"]];
+        NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+        if (userDef) {
+            [userDef setObject:model.name forKey:@"name"];
+            [userDef setObject:model.LoginName forKey:@"loginName"];
+            [userDef setObject:model.cydm forKey:@"cydm"];
+            [userDef setObject:model.lxhd forKey:@"lxdh"];
+            [userDef setObject:model.txdz forKey:@"txdz"];
+            [userDef setObject:model.type forKey:@"type"];
+            [userDef synchronize];
+        }
     } fail:^{
         [hud hide:YES];
         [hud removeFromSuperview];

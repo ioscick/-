@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A3843291CA262AB0070C62A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3843281CA262AB0070C62A /* LoginViewController.m */; };
 		8A38432C1CA2756F0070C62A /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A38432B1CA2756F0070C62A /* MessageView.m */; };
+		8A38432F1CA2843F0070C62A /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A38432E1CA2843F0070C62A /* UserModel.m */; };
 		8A3DBD851CA12D66003D0C7F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DBD791CA12D66003D0C7F /* AFHTTPSessionManager.m */; };
 		8A3DBD861CA12D66003D0C7F /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DBD7C1CA12D66003D0C7F /* AFNetworkReachabilityManager.m */; };
 		8A3DBD871CA12D66003D0C7F /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DBD7E1CA12D66003D0C7F /* AFSecurityPolicy.m */; };
@@ -91,6 +92,8 @@
 		8A3843281CA262AB0070C62A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8A38432A1CA2756F0070C62A /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
 		8A38432B1CA2756F0070C62A /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		8A38432D1CA2843F0070C62A /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = ../../TabBarVc/Login/UserModel.h; sourceTree = "<group>"; };
+		8A38432E1CA2843F0070C62A /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = ../../TabBarVc/Login/UserModel.m; sourceTree = "<group>"; };
 		8A3DBD781CA12D66003D0C7F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		8A3DBD791CA12D66003D0C7F /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		8A3DBD7A1CA12D66003D0C7F /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				8A3DBD911CA130AB003D0C7F /* LoginRequestData.m */,
 				8A3DBD931CA133CB003D0C7F /* LoginManager.h */,
 				8A3DBD941CA133CB003D0C7F /* LoginManager.m */,
+				8A38432D1CA2843F0070C62A /* UserModel.h */,
+				8A38432E1CA2843F0070C62A /* UserModel.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				8AA685FA1C96923A00F32F3C /* AdScrollView.m in Sources */,
 				8A3DBD881CA12D66003D0C7F /* AFURLRequestSerialization.m in Sources */,
 				8AA6861F1C96925C00F32F3C /* MJRefreshLegendFooter.m in Sources */,
+				8A38432F1CA2843F0070C62A /* UserModel.m in Sources */,
 				8AA6866C1C96926800F32F3C /* UIButton+WebCache.m in Sources */,
 				8AA686791C969A1700F32F3C /* UpButton.m in Sources */,
 				8AA686191C96925C00F32F3C /* MJRefreshComponent.m in Sources */,
