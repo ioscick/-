@@ -64,6 +64,10 @@
 }
 
 - (void)headerRefreshing{
+    if (self.tableView.footer.state == MJRefreshFooterStateNoMoreData) {
+        [self.tableView.footer resetNoMoreData];
+    }
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [self getdata];
@@ -77,8 +81,8 @@
 
 - (void)getdata{
     page = 1;
-    [self.dataArray removeAllObjects];
     [HonourVcManager postWithLoginNameStr:@"1" password:@"10" success:^(id json) {
+        [self.dataArray removeAllObjects];
         page++;
         NSArray *listArray = [[json objectForKey:@"data"] objectForKey:@"list"];
         totalPage = [[[json objectForKey:@"data"] objectForKey:@"totalPage"] intValue];
@@ -97,19 +101,15 @@
 
 - (void)footerRefreshing{
     if (page > totalPage) {
-        [self.tableView.footer endRefreshing];
-        MessageView *message = [[MessageView alloc] initWithFrame:CGRectMake(WIDTH / 2 - 100, MainHIGHT / 2 - 30, 200, 60) Text:@"已经是最后一页了"];
-        [self.view addSubview:message];
+        [self.tableView.footer noticeNoMoreData];
         return;
     }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
         // 刷新表格
         [self getMoreData];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
         [self.tableView.footer endRefreshing];
     });
-    
 }
 
 - (void)getMoreData{
@@ -139,8 +139,8 @@
         cell = [[HonourTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HONOURCELL"];
     }
     HonourModel *model = self.dataArray[indexPath.row];
-    cell.timeLabel.text = model.introduction;
-    cell.titleLabel.text = model.honor_date;
+    cell.timeLabel.text = model.honor_date;
+    cell.titleLabel.text = model.introduction;
     return cell;
 }
 

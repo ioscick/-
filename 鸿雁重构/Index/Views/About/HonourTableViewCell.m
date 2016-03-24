@@ -48,13 +48,13 @@
 
 - (void)drawRect:(CGRect)rect{
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context, _timeLabel.frame.size.width + 20, 0);
-    CGContextAddLineToPoint(context, _timeLabel.frame.size.width + 20, self.frame.size.height);
+    CGContextMoveToPoint(context, _timeLabel.frame.size.width + 30, 0);
+    CGContextAddLineToPoint(context, _timeLabel.frame.size.width + 30, self.frame.size.height);
     CGContextSetStrokeColorWithColor(context, RGBCOLOR(199, 199, 199).CGColor);
     CGContextStrokePath(context);
     
     CGContextSetFillColorWithColor(context, HongYardColor.CGColor);
-    CGContextAddArc(context, _timeLabel.frame.size.width + 20, self.frame.size.height / 2, 5, 0, 2 * M_PI, 0);
+    CGContextAddArc(context, _timeLabel.frame.size.width + 30, self.frame.size.height / 2, 5, 0, 2 * M_PI, 0);
     CGContextDrawPath(context, kCGPathFill);
 }
 

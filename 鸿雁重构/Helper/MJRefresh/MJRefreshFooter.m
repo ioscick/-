@@ -112,7 +112,7 @@
 {
     [super layoutSubviews];
     
-    self.loadMoreButton.frame = self.bounds;
+//    self.loadMoreButton.frame = self.bounds;
     self.stateLabel.frame = self.bounds;
     self.noMoreLabel.frame = self.bounds;
 }
