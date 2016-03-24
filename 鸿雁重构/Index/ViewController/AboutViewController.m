@@ -8,6 +8,8 @@
 
 #import "AboutViewController.h"
 #import "LoginManager.h"
+#import "UpButton.h"
+#import "IntruduceViewController.h"
 
 @interface AboutViewController ()
 
@@ -17,12 +19,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [LoginManager postWithLoginNameStr:@"00048" password:@"00048" success:^(id json) {
-        
-    } fail:^{
-        
-    }];
+    [self set_buttons];
     // Do any additional setup after loading the view.
+}
+
+- (void)set_buttons{
+    for (int i = 0; i < 3; i++) {
+        UpButton *button = [[UpButton alloc] initWithFrame:CGRectMake(30 + i % 4 * (60 + WIDTH / 2 - 120), 80, 60, 70)];
+        button.imageView.image = [UIImage imageNamed:@"zlfkmsg_img_zlfk"];
+        button.tag = i;
+        [button setTitle:@"关于鸿雁" forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont systemFontOfSize:12];
+        [button setTitleColor:RGBCOLOR(0, 149, 133) forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(buttonTapedItem:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+    }
+}
+
+- (void)buttonTapedItem:(UpButton *)sender{
+    IntruduceViewController *inVc = [[IntruduceViewController alloc] init];
+    [self.navigationController pushViewController:inVc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

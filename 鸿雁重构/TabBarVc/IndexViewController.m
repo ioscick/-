@@ -128,14 +128,14 @@
 }
 
 - (void)pushView:(NSInteger)tag{
-    LoginViewController *loginVc = [[LoginViewController alloc] init];
-    loginVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:loginVc animated:YES];
-//    AboutViewController *aboutVc = [[AboutViewController alloc] init];
-//    aboutVc.view.backgroundColor = [UIColor whiteColor];
-//    aboutVc.title = @"关于鸿雁";
-//    aboutVc.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:aboutVc animated:YES];
+//    LoginViewController *loginVc = [[LoginViewController alloc] init];
+//    loginVc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:loginVc animated:YES];
+    AboutViewController *aboutVc = [[AboutViewController alloc] init];
+    aboutVc.view.backgroundColor = [UIColor whiteColor];
+    aboutVc.title = @"关于鸿雁";
+    aboutVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:aboutVc animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

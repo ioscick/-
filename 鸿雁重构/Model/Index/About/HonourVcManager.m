@@ -1,32 +1,32 @@
 //
-//  LoginManager.m
+//  HonourVcManager.m
 //  鸿雁重构
 //
-//  Created by shenliping on 16/3/22.
+//  Created by shenliping on 16/3/24.
 //  Copyright © 2016年 shenliping. All rights reserved.
 //
 
-#import "LoginManager.h"
+#import "HonourVcManager.h"
 #import "RequestHeader.h"
-#import "LoginRequestData.h"
+#import "HonourRequestData.h"
 
-@implementation LoginManager
+@implementation HonourVcManager
 
-+ (void)postWithLoginNameStr:(NSString *)loginName password:(NSString *)loginPassword success:(void (^)(id))success fail:(void (^)())fail{
-    RequestHeader *header = [[RequestHeader alloc] initWithtrcode:@"HYXK00001"];
++ (void)postWithLoginNameStr:(NSString *)number password:(NSString *)size success:(void (^)(id))success fail:(void (^)())fail{
+    RequestHeader *header = [[RequestHeader alloc] initWithtrcode:@"HYXK00004"];
     NSDictionary *headerDict = [header HeaderDict];
     
-    LoginRequestData *data = [[LoginRequestData alloc] initWithGetData:loginName passWord:loginPassword];
+    HonourRequestData *data = [[HonourRequestData alloc] initWithGetData:number passWord:size];
     NSDictionary *dataDict = data.dict;
-//    NSDictionary *paramer = [NSDictionary dictionaryWithObjectsAndKeys:@"data",dataDict,@"header",headerDict, nil];
+    //    NSDictionary *paramer = [NSDictionary dictionaryWithObjectsAndKeys:@"data",dataDict,@"header",headerDict, nil];
     NSDictionary *paramer = @{@"data":dataDict,@"header":headerDict};
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:paramer options:NSJSONWritingPrettyPrinted error:nil];
-//
+    //
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     NSDictionary *parameters =@{@"content":jsonString};
-
+    
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     [sessionManager POST:REQUESTURL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -34,9 +34,10 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
-//        NSLog(@"%@",responseObject);
+        NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         fail();
     }];
 }
+
 @end
