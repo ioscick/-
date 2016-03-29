@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A330A9C1CA90F59006843DA /* ClassicalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A330A9B1CA90F59006843DA /* ClassicalCollectionViewController.m */; };
+		8A330A9F1CA91082006843DA /* ClassicalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A330A9E1CA91082006843DA /* ClassicalCollectionViewCell.m */; };
+		8A330AA21CA923D5006843DA /* ClassicalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A330AA11CA923D5006843DA /* ClassicalViewController.m */; };
+		8A330AA51CA9263C006843DA /* ClassicalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A330AA41CA9263C006843DA /* ClassicalModel.m */; };
 		8A3843291CA262AB0070C62A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3843281CA262AB0070C62A /* LoginViewController.m */; };
 		8A38432C1CA2756F0070C62A /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A38432B1CA2756F0070C62A /* MessageView.m */; };
 		8A38432F1CA2843F0070C62A /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A38432E1CA2843F0070C62A /* UserModel.m */; };
@@ -27,6 +31,7 @@
 		8A7A1A801CA3B28F00464833 /* HonourVcManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A1A7F1CA3B28F00464833 /* HonourVcManager.m */; };
 		8A7A1A831CA3B2AD00464833 /* HonourRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A1A821CA3B2AD00464833 /* HonourRequestData.m */; };
 		8A7A1A861CA3BB5300464833 /* HonourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A1A851CA3BB5300464833 /* HonourModel.m */; };
+		8A7A94681CAA199E009100EA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A94671CAA199E009100EA /* WebViewController.m */; };
 		8AA685AB1C96891000F32F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685AA1C96891000F32F3C /* main.m */; };
 		8AA685AE1C96891000F32F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685AD1C96891000F32F3C /* AppDelegate.m */; };
 		8AA685B11C96891000F32F3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685B01C96891000F32F3C /* ViewController.m */; };
@@ -93,6 +98,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A330A9A1CA90F59006843DA /* ClassicalCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassicalCollectionViewController.h; sourceTree = "<group>"; };
+		8A330A9B1CA90F59006843DA /* ClassicalCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassicalCollectionViewController.m; sourceTree = "<group>"; };
+		8A330A9D1CA91082006843DA /* ClassicalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassicalCollectionViewCell.h; path = About/ClassicalCollectionViewCell.h; sourceTree = "<group>"; };
+		8A330A9E1CA91082006843DA /* ClassicalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassicalCollectionViewCell.m; path = About/ClassicalCollectionViewCell.m; sourceTree = "<group>"; };
+		8A330AA01CA923D5006843DA /* ClassicalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassicalViewController.h; sourceTree = "<group>"; };
+		8A330AA11CA923D5006843DA /* ClassicalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassicalViewController.m; sourceTree = "<group>"; };
+		8A330AA31CA9263C006843DA /* ClassicalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassicalModel.h; sourceTree = "<group>"; };
+		8A330AA41CA9263C006843DA /* ClassicalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassicalModel.m; sourceTree = "<group>"; };
 		8A3843271CA262AB0070C62A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8A3843281CA262AB0070C62A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8A38432A1CA2756F0070C62A /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
@@ -134,6 +147,8 @@
 		8A7A1A821CA3B2AD00464833 /* HonourRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonourRequestData.m; sourceTree = "<group>"; };
 		8A7A1A841CA3BB5300464833 /* HonourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonourModel.h; sourceTree = "<group>"; };
 		8A7A1A851CA3BB5300464833 /* HonourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonourModel.m; sourceTree = "<group>"; };
+		8A7A94661CAA199E009100EA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8A7A94671CAA199E009100EA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		8AA685A61C96891000F32F3C /* 鸿雁重构.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "鸿雁重构.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA685AA1C96891000F32F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AA685AC1C96891000F32F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -310,9 +325,14 @@
 		8A70C33D1C97E41000E43215 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8A7A94651CAA18A8009100EA /* WkWebViewController */,
 				8A7A1A741CA38EBC00464833 /* About */,
 				8A70C33E1C97E42200E43215 /* AboutViewController.h */,
 				8A70C33F1C97E42200E43215 /* AboutViewController.m */,
+				8A330AA01CA923D5006843DA /* ClassicalViewController.h */,
+				8A330AA11CA923D5006843DA /* ClassicalViewController.m */,
+				8A330A9A1CA90F59006843DA /* ClassicalCollectionViewController.h */,
+				8A330A9B1CA90F59006843DA /* ClassicalCollectionViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -339,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				8A7A1A7D1CA3B27200464833 /* About */,
+				8A330AA31CA9263C006843DA /* ClassicalModel.h */,
+				8A330AA41CA9263C006843DA /* ClassicalModel.m */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -354,6 +376,15 @@
 				8A7A1A851CA3BB5300464833 /* HonourModel.m */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		8A7A94651CAA18A8009100EA /* WkWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A7A94661CAA199E009100EA /* WebViewController.h */,
+				8A7A94671CAA199E009100EA /* WebViewController.m */,
+			);
+			path = WkWebViewController;
 			sourceTree = "<group>";
 		};
 		8AA6859D1C96891000F32F3C = {
@@ -609,6 +640,8 @@
 				8A70C2FC1C97957100E43215 /* NewsTableViewCell.m */,
 				8A70C3411C9808CF00E43215 /* NewsHeaderView.h */,
 				8A70C3421C9808CF00E43215 /* NewsHeaderView.m */,
+				8A330A9D1CA91082006843DA /* ClassicalCollectionViewCell.h */,
+				8A330A9E1CA91082006843DA /* ClassicalCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -751,6 +784,7 @@
 				8A3DBD871CA12D66003D0C7F /* AFSecurityPolicy.m in Sources */,
 				8AA686631C96926800F32F3C /* MKAnnotationView+WebCache.m in Sources */,
 				8AA686201C96925C00F32F3C /* MJRefreshLegendHeader.m in Sources */,
+				8A7A94681CAA199E009100EA /* WebViewController.m in Sources */,
 				8AA6861A1C96925C00F32F3C /* MJRefreshConst.m in Sources */,
 				8A70C3431C9808CF00E43215 /* NewsHeaderView.m in Sources */,
 				8A7A1A861CA3BB5300464833 /* HonourModel.m in Sources */,
@@ -758,8 +792,11 @@
 				8A70C3401C97E42200E43215 /* AboutViewController.m in Sources */,
 				8AA685B11C96891000F32F3C /* ViewController.m in Sources */,
 				8AA685AE1C96891000F32F3C /* AppDelegate.m in Sources */,
+				8A330A9C1CA90F59006843DA /* ClassicalCollectionViewController.m in Sources */,
 				8AA686211C96925C00F32F3C /* UIScrollView+MJExtension.m in Sources */,
+				8A330AA21CA923D5006843DA /* ClassicalViewController.m in Sources */,
 				8AA685F11C968AC900F32F3C /* ServiceViewController.m in Sources */,
+				8A330A9F1CA91082006843DA /* ClassicalCollectionViewCell.m in Sources */,
 				8AA686641C96926800F32F3C /* NSData+ImageContentType.m in Sources */,
 				8AA6866D1C96926800F32F3C /* UIImage+GIF.m in Sources */,
 				8AA6861D1C96925C00F32F3C /* MJRefreshGifHeader.m in Sources */,
@@ -785,6 +822,7 @@
 				8A7A1A801CA3B28F00464833 /* HonourVcManager.m in Sources */,
 				8A3DBD881CA12D66003D0C7F /* AFURLRequestSerialization.m in Sources */,
 				8AA6861F1C96925C00F32F3C /* MJRefreshLegendFooter.m in Sources */,
+				8A330AA51CA9263C006843DA /* ClassicalModel.m in Sources */,
 				8A38432F1CA2843F0070C62A /* UserModel.m in Sources */,
 				8AA6866C1C96926800F32F3C /* UIButton+WebCache.m in Sources */,
 				8AA686791C969A1700F32F3C /* UpButton.m in Sources */,

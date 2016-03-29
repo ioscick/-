@@ -12,8 +12,8 @@
 
 @implementation HonourVcManager
 
-+ (void)postWithLoginNameStr:(NSString *)number password:(NSString *)size success:(void (^)(id))success fail:(void (^)())fail{
-    RequestHeader *header = [[RequestHeader alloc] initWithtrcode:@"HYXK00004"];
++ (void)postWithLoginNameStr:(NSString *)number password:(NSString *)size FWD:(NSString *)fwd success:(void (^)(id))success fail:(void (^)())fail{
+    RequestHeader *header = [[RequestHeader alloc] initWithtrcode:fwd];
     NSDictionary *headerDict = [header HeaderDict];
     
     HonourRequestData *data = [[HonourRequestData alloc] initWithGetData:number passWord:size];
@@ -34,7 +34,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         fail();
     }];

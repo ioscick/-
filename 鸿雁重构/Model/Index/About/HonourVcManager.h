@@ -10,6 +10,6 @@
 
 @interface HonourVcManager : NSObject
 
-+ (void)postWithLoginNameStr:(NSString *)number password:(NSString *)size success:(void (^)(id json))success fail:(void (^)())fail;
++ (void)postWithLoginNameStr:(NSString *)number password:(NSString *)size FWD:(NSString *)fwd success:(void (^)(id json))success fail:(void (^)())fail;
 
 @end

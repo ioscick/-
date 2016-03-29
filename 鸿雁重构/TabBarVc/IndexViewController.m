@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "AboutViewController.h"
 #import "NewsHeaderView.h"
+#import "ClassicalCollectionViewController.h"
 
 @interface IndexViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -131,11 +132,24 @@
 //    LoginViewController *loginVc = [[LoginViewController alloc] init];
 //    loginVc.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:loginVc animated:YES];
-    AboutViewController *aboutVc = [[AboutViewController alloc] init];
-    aboutVc.view.backgroundColor = [UIColor whiteColor];
-    aboutVc.title = @"关于鸿雁";
-    aboutVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:aboutVc animated:YES];
+    if (tag == 0) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumLineSpacing = 1;
+        flowLayout.minimumInteritemSpacing = 0;
+        [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+        
+        ClassicalCollectionViewController *classicalVC = [[ClassicalCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+        classicalVC.view.backgroundColor = [UIColor whiteColor];
+        classicalVC.hidesBottomBarWhenPushed = YES;
+        classicalVC.title = @"经典作品";
+        [self.navigationController pushViewController:classicalVC animated:YES];
+    }else{
+        AboutViewController *aboutVc = [[AboutViewController alloc] init];
+        aboutVc.view.backgroundColor = [UIColor whiteColor];
+        aboutVc.title = @"关于鸿雁";
+        aboutVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:aboutVc animated:YES];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

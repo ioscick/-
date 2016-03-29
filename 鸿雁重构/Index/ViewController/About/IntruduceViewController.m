@@ -81,7 +81,7 @@
 
 - (void)getdata{
     page = 1;
-    [HonourVcManager postWithLoginNameStr:@"1" password:@"10" success:^(id json) {
+    [HonourVcManager postWithLoginNameStr:@"1" password:@"10" FWD:@"HYXK00004" success:^(id json) {
         [self.dataArray removeAllObjects];
         page++;
         NSArray *listArray = [[json objectForKey:@"data"] objectForKey:@"list"];
@@ -108,12 +108,15 @@
         // 刷新表格
         [self getMoreData];
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [self.tableView.footer endRefreshing];
+        if ([self.tableView.footer isRefreshing]) {
+            [self.tableView.footer endRefreshing];
+        }
+        
     });
 }
 
 - (void)getMoreData{
-    [HonourVcManager postWithLoginNameStr:[NSString stringWithFormat:@"%d",page] password:@"10" success:^(id json) {
+    [HonourVcManager postWithLoginNameStr:[NSString stringWithFormat:@"%d",page] password:@"10" FWD:@"HYXK00004" success:^(id json) {
         page++;
         NSArray *listArray = [[json objectForKey:@"data"] objectForKey:@"list"];
         for (NSDictionary *dict in listArray) {
