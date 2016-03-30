@@ -129,9 +129,6 @@
 }
 
 - (void)pushView:(NSInteger)tag{
-//    LoginViewController *loginVc = [[LoginViewController alloc] init];
-//    loginVc.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:loginVc animated:YES];
     if (tag == 0) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = 1;
@@ -143,6 +140,11 @@
         classicalVC.hidesBottomBarWhenPushed = YES;
         classicalVC.title = @"经典作品";
         [self.navigationController pushViewController:classicalVC animated:YES];
+    }else if (tag == 1){
+        LoginViewController *loginVc = [[LoginViewController alloc] init];
+        loginVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:loginVc animated:YES];
+
     }else{
         AboutViewController *aboutVc = [[AboutViewController alloc] init];
         aboutVc.view.backgroundColor = [UIColor whiteColor];

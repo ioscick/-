@@ -48,7 +48,8 @@
 - (MBProgressHUD *)hud{
     if (_hud == nil) {
         _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        _hud.mode = UIPushBehaviorModeInstantaneous;
+//        _hud.mode = MBProgressHUDModeCustomView;
+        _hud.labelText = @"正在加载中...";
     }
     return _hud;
 }
@@ -61,7 +62,7 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
 //    NSLog(@"结束了");
-    [self.hud hide:YES];
+    [self.hud hide:YES afterDelay:5];
 }
 
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{

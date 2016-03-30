@@ -49,6 +49,7 @@
         _loginLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 120, 100, 20)];
         _loginLabel.text = @"用户名：";
         _loginLabel.textColor = [UIColor grayColor];
+        _loginLabel.font = [UIFont systemFontOfSize:20];
         _loginLabel.textAlignment = NSTextAlignmentRight;
     }
     return _loginLabel;
@@ -57,8 +58,11 @@
 - (UILabel *)passwordLabel{
     if (_passwordLabel == nil) {
         _passwordLabel = [[UILabel alloc] initWithFrame:CGRectMake(_loginLabel.frame.origin.x, _loginLabel.frame.origin.y + _loginLabel.frame.size.height + 10, 100, 20)];
-        _passwordLabel.text = @"密    码：";
+        NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"密码："];
+        [str addAttribute:NSKernAttributeName value:[NSNumber numberWithInt:20] range:NSMakeRange(0, 1)];
+        _passwordLabel.attributedText = str;
         _passwordLabel.textColor = [UIColor grayColor];
+        _passwordLabel.font = [UIFont systemFontOfSize:20];
         _passwordLabel.textAlignment = NSTextAlignmentRight;
     }
     return _passwordLabel;

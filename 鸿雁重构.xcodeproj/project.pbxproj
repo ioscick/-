@@ -32,6 +32,7 @@
 		8A7A1A831CA3B2AD00464833 /* HonourRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A1A821CA3B2AD00464833 /* HonourRequestData.m */; };
 		8A7A1A861CA3BB5300464833 /* HonourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A1A851CA3BB5300464833 /* HonourModel.m */; };
 		8A7A94681CAA199E009100EA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A94671CAA199E009100EA /* WebViewController.m */; };
+		8A7A94AE1CAA70C6009100EA /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7A94AD1CAA70C6009100EA /* NewsViewController.m */; };
 		8AA685AB1C96891000F32F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685AA1C96891000F32F3C /* main.m */; };
 		8AA685AE1C96891000F32F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685AD1C96891000F32F3C /* AppDelegate.m */; };
 		8AA685B11C96891000F32F3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA685B01C96891000F32F3C /* ViewController.m */; };
@@ -149,6 +150,8 @@
 		8A7A1A851CA3BB5300464833 /* HonourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonourModel.m; sourceTree = "<group>"; };
 		8A7A94661CAA199E009100EA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		8A7A94671CAA199E009100EA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8A7A94AC1CAA70C6009100EA /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		8A7A94AD1CAA70C6009100EA /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		8AA685A61C96891000F32F3C /* 鸿雁重构.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "鸿雁重构.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA685AA1C96891000F32F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AA685AC1C96891000F32F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				8A330AA11CA923D5006843DA /* ClassicalViewController.m */,
 				8A330A9A1CA90F59006843DA /* ClassicalCollectionViewController.h */,
 				8A330A9B1CA90F59006843DA /* ClassicalCollectionViewController.m */,
+				8A7A94AC1CAA70C6009100EA /* NewsViewController.h */,
+				8A7A94AD1CAA70C6009100EA /* NewsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 				8AA685AB1C96891000F32F3C /* main.m in Sources */,
 				8AA686701C96926800F32F3C /* UIImageView+HighlightedWebCache.m in Sources */,
 				8A7A1A831CA3B2AD00464833 /* HonourRequestData.m in Sources */,
+				8A7A94AE1CAA70C6009100EA /* NewsViewController.m in Sources */,
 				8A3DBD8E1CA12E82003D0C7F /* RequestHeader.m in Sources */,
 				8AA685FE1C96925600F32F3C /* MBProgressHUD.m in Sources */,
 				8AA686671C96926800F32F3C /* SDWebImageDecoder.m in Sources */,
